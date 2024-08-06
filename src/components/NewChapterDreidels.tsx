@@ -7,6 +7,13 @@ export const NewChapterDreidels = () => {
     const dreidelRef = useRef(chapterStartDreidels);
     dreidelRef.current = chapterStartDreidels;
 
+    const values = {
+        [Side.GIMEL]: 2,
+        [Side.HEY]: 1,
+        [Side.NUN]: 0,
+        [Side.SHIN]: -1,
+    };
+
     const poissonGenerator = (lambda: number) => {    
         let usedElapsed = 0;
         let numberOfEvents = 0;
@@ -35,8 +42,11 @@ export const NewChapterDreidels = () => {
 
     return <Container>
         <Box>Chapter Start Spin</Box>
-        {chapterStartDreidels.map((side, index) => <Dreidel side={side} endTime={5*chapterStartDreidels.length - 2 * index} onLand={setStartDreidelIndex(index)}/>)}
+        {chapterStartDreidels.map((side, index) => <Box>
+                <Dreidel side={side} endTime={5*chapterStartDreidels.length - 2*index - 1} onLand={setStartDreidelIndex(index)}/>
+                {side === undefined || values[side]}
+            </Box>)}
+        {chapterStartDreidels.some(side => side === undefined) || <Box>Total: {chapterStartDreidels.map(side => side !== undefined ? values[side] : 0).reduce((a, b) => a + b, 0)}</Box>}
         {chapterStartDreidels.some(side => side === undefined) || <Button onClick={spinStartDreidels}>Spin New Chapter Dreidels</Button>}
-
     </Container>;
 }
