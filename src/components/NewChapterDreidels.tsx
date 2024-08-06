@@ -4,6 +4,8 @@ import { Dreidel, Side } from '../components/Dreidel';
 
 export const NewChapterDreidels = () => {
     const [chapterStartDreidels, setChapterStartDreidels] = useState<(Side | undefined)[]>([]);
+    const dreidelRef = useRef(chapterStartDreidels);
+    dreidelRef.current = chapterStartDreidels;
 
     const poissonGenerator = (lambda: number) => {    
         let usedElapsed = 0;
@@ -23,7 +25,12 @@ export const NewChapterDreidels = () => {
 
     const spinStartDreidels = () => {
         let numberOfDreidels = poissonGenerator(3);
-        setChapterStartDreidels(Array.from(Array(numberOfDreidels)));
+        setChapterStartDreidels([]);
+        for(var i=0;i < numberOfDreidels; i++) {
+            setTimeout(() => {
+                setChapterStartDreidels([...dreidelRef.current, undefined]);
+            }, i*500);
+        }
     }
 
     return <Container>
