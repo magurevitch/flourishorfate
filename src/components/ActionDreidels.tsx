@@ -8,6 +8,39 @@ export const ActionDreidels = () => {
     const [isSupporting, setSupporting] = useState<boolean>(false);
     const [supportDreidel, setSupportDreidel] = useState<Side | undefined>(Side.GIMEL);
 
+    const isHit = {
+        [Side.GIMEL]: true,
+        [Side.HEY]: true,
+        [Side.NUN]: false,
+        [Side.SHIN]: false,
+    };
+
+    const isReprecussion = {
+        [Side.GIMEL]: false,
+        [Side.HEY]: true,
+        [Side.NUN]: false,
+        [Side.SHIN]: true,
+    };
+
+    const determineReprecussions = () => {
+        if(actionDreidel === undefined) return [];
+        if(!isReprecussion[actionDreidel]) return [false];
+        if(!isSupporting) return [true];
+        if(supportDreidel === undefined) return [];
+        return [!isHit[supportDreidel], isReprecussion[supportDreidel]];
+    }
+
+    const renderReprecussions = () => {
+        function represent(value: boolean) {
+            return value ? "Repercussions" : "No Repercussions";
+        }
+
+        let repercussions = determineReprecussions();
+        if(!repercussions.length) return false;
+        if(repercussions.length === 1) return <Box>{represent(repercussions[0])}</Box>
+        return <Box>Original Actor: {represent(repercussions[0])} <br/> Supporter: {represent(repercussions[1])}</Box>
+    }
+
     const randomInNormalDistribution = (mean: number, sigma: number) => {
         //the Box-Muller Transform
         let phi = 2 * Math.PI * Math.random();
@@ -34,6 +67,8 @@ export const ActionDreidels = () => {
         <Box>Action Dreidels</Box>
         <Dreidel side={actionDreidel} endTime={actionTimer} onLand={setActionDreidel}/>
         {!isSupporting  || <Dreidel side={supportDreidel} endTime={actionTimer/4} onLand={setSupportDreidel}/>}
+        {actionDreidel === undefined || <Box>{isHit[actionDreidel] ? "Hit" : "Miss"}</Box>}
+        {renderReprecussions()}
         {actionDreidel !== undefined ? <Button onClick={spinActionDreidel}>Spin Dreidel</Button> : !isSupporting ? <Button onClick={spinSupportDreidel}>Spin Support Dreidel</Button> : null}
     </Container>;
 }
