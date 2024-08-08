@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { DybbuksAndDreidels } from './pages/DybbuksAndDreidels';
@@ -11,7 +11,7 @@ import { DreidelSpinner } from './pages/DreidelSpinner';
 function App() {
   return (
     <Container>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -19,7 +19,7 @@ function App() {
           <Route path="/dybbuks-and-dreidels" element={<DybbuksAndDreidels />} />
           <Route path="/dybbuks-and-dreidels/dreidel-spinner" element={<DreidelSpinner />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </Container>
   );
 }

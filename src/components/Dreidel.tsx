@@ -8,22 +8,32 @@ export enum Side {
 }
 
 export const Dreidel: React.FC<{side?: Side, endTime: number, onLand: (side: Side) => void}> = ({side, endTime, onLand}) => {
-    const [face, setFace] = useState<number>(0);
-
-    useEffect(() => {
-        if (face > endTime) {
-            land();
-        } else if (side === undefined) {
-            let intervalId = setInterval(() => {setFace(face+1)}, 100);
-            return () => clearInterval(intervalId);
-        }
-    }, [side, endTime, face]);
+    const [counter, setCounter] = useState<number>(0);
 
     const land = () => {
         let side = Math.floor(Math.random() * 4);
         onLand(side);
-        setFace(0);
+        setCounter(0);
     }
 
-    return side === undefined ? <div>{face}</div> : <div>{Side[side]}</div>;
+    useEffect(() => {
+        if (counter > endTime) {
+            land();
+        } else if (side === undefined) {
+            let intervalId = setInterval(() => {setCounter(counter+1)}, 100);
+            return () => clearInterval(intervalId);
+        }
+    }, [side, endTime, counter, land]);
+
+    const chooseImage = () => {
+        if(counter + 10 > endTime) {
+            return `falling-${counter % 4}`
+        }
+        if(counter + 20 > endTime) {
+            return `wobbling-${counter % 4}`
+        }
+        return `stable-${counter % 4}`
+    }
+
+    return side === undefined ? <div>{chooseImage()}</div> : <div>{Side[side]}</div>;
 }

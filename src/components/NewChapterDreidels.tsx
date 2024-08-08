@@ -6,6 +6,7 @@ export const NewChapterDreidels = () => {
     const [chapterStartDreidels, setChapterStartDreidels] = useState<(Side | undefined)[]>([]);
     const dreidelRef = useRef(chapterStartDreidels);
     dreidelRef.current = chapterStartDreidels;
+    const [numberOfDreidels, setNumberOfDreidels] = useState<number>(0);
 
     const values = {
         [Side.GIMEL]: 2,
@@ -32,6 +33,7 @@ export const NewChapterDreidels = () => {
 
     const spinStartDreidels = () => {
         let numberOfDreidels = poissonGenerator(3);
+        setNumberOfDreidels(numberOfDreidels);
         setChapterStartDreidels([]);
         for(var i=0;i < numberOfDreidels; i++) {
             setTimeout(() => {
@@ -43,7 +45,7 @@ export const NewChapterDreidels = () => {
     return <Container>
         <Box>Chapter Start Spin</Box>
         {chapterStartDreidels.map((side, index) => <Box>
-                <Dreidel side={side} endTime={5*chapterStartDreidels.length - 2*index - 1} onLand={setStartDreidelIndex(index)}/>
+                <Dreidel side={side} endTime={5*numberOfDreidels - 2*index - 1} onLand={setStartDreidelIndex(index)}/>
                 {side === undefined || values[side]}
             </Box>)}
         {chapterStartDreidels.some(side => side === undefined) || <Box>Total: {chapterStartDreidels.map(side => side !== undefined ? values[side] : 0).reduce((a, b) => a + b, 0)}</Box>}
