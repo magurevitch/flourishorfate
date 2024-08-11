@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Box, Button, Container } from '@mui/material';
+import { Box, Button, Container, Grid } from '@mui/material';
 import { Dreidel, Side } from '../components/Dreidel';
 
 export const NewChapterDreidels = () => {
@@ -44,10 +44,13 @@ export const NewChapterDreidels = () => {
 
     return <Container>
         <Box>Chapter Start Spin</Box>
-        {chapterStartDreidels.map((side, index) => <Box>
+        <Grid container >
+            {chapterStartDreidels.map((side, index) => <Grid item>
                 <Dreidel side={side} endTime={5*numberOfDreidels - 2*index - 1} onLand={setStartDreidelIndex(index)}/>
-                {side === undefined || values[side]}
-            </Box>)}
+                <br/>
+                {side === undefined || `${values[side]}`}
+            </Grid>)}
+        </Grid>
         {chapterStartDreidels.some(side => side === undefined) || <Box>Total: {chapterStartDreidels.map(side => side !== undefined ? values[side] : 0).reduce((a, b) => a + b, 0)}</Box>}
         {chapterStartDreidels.some(side => side === undefined) || <Button onClick={spinStartDreidels}>Spin New Chapter Dreidels</Button>}
     </Container>;

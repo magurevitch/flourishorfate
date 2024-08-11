@@ -1,3 +1,4 @@
+import { Box } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 
 export enum Side {
@@ -26,14 +27,21 @@ export const Dreidel: React.FC<{side?: Side, endTime: number, onLand: (side: Sid
     }, [side, endTime, counter, land]);
 
     const chooseImage = () => {
+        if(side !== undefined) {
+            return `/dreidels/${Side[side]}.jpg`;
+        }
         if(counter + 10 > endTime) {
-            return `falling-${counter % 4}`
+            return `/dreidels/falling-${counter % 6}.jpg`
         }
         if(counter + 20 > endTime) {
-            return `wobbling-${counter % 4}`
+            return `/dreidels/wobbling-${counter % 6}.jpg`
         }
-        return `stable-${counter % 4}`
+        return `/dreidels/stable-${counter % 3}.jpg`
     }
 
-    return side === undefined ? <div>{chooseImage()}</div> : <div>{Side[side]}</div>;
+    return <Box>
+        <img src={chooseImage()} width={80} alt={side === undefined ? "spinning dreidel" : Side[side]}/>
+        <br/>
+        {side === undefined || `${Side[side]}`}
+    </Box>;
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Button, Container } from '@mui/material';
+import { Box, Button, Container, Grid } from '@mui/material';
 import { Dreidel, Side } from '../components/Dreidel';
 
 export const ActionDreidels = () => {
@@ -64,9 +64,13 @@ export const ActionDreidels = () => {
     }
 
     return <Container>
-        <Box>Action Dreidels</Box>
-        <Dreidel side={actionDreidel} endTime={actionTimer} onLand={setActionDreidel}/>
-        {!isSupporting  || <Dreidel side={supportDreidel} endTime={actionTimer/4} onLand={setSupportDreidel}/>}
+        <Grid container spacing={2}>
+            <Grid item>
+                Action Dreidel <br/>
+                <Dreidel side={actionDreidel} endTime={actionTimer} onLand={setActionDreidel}/>
+            </Grid>
+            {!isSupporting  || <Grid item>Support Dreidel<br/><Dreidel side={supportDreidel} endTime={actionTimer/4} onLand={setSupportDreidel}/></Grid>}
+        </Grid>
         {actionDreidel === undefined || <Box>{isHit[actionDreidel] ? "Hit" : "Miss"}</Box>}
         {renderReprecussions()}
         {actionDreidel !== undefined ? <Button onClick={spinActionDreidel}>Spin Dreidel</Button> : !isSupporting ? <Button onClick={spinSupportDreidel}>Spin Support Dreidel</Button> : null}
