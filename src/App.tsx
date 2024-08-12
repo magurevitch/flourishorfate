@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { HashRouter, redirect, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { DybbuksAndDreidels } from './pages/DybbuksAndDreidels';
