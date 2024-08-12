@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Box, Button, Container, Grid } from '@mui/material';
+import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import { Dreidel, Side } from '../components/Dreidel';
 
 export const NewChapterDreidels = () => {
@@ -43,7 +43,7 @@ export const NewChapterDreidels = () => {
     }
 
     return <Container>
-        <Box>Chapter Start Spin</Box>
+        <Typography>Chapter Start Spin</Typography>
         <Grid container >
             {chapterStartDreidels.map((side, index) => <Grid item>
                 <Dreidel side={side} endTime={5*numberOfDreidels - 2*index - 1} onLand={setStartDreidelIndex(index)}/>

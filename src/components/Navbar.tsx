@@ -8,7 +8,6 @@ export const Navbar = () => {
     return <AppBar position='fixed'>
         <Toolbar>
             <Button><Link to="/">Home</Link></Button>
-            <Button><Link to="/about">About</Link></Button>
             <Button><Link to="/dybbuks-and-dreidels">Dybbuks and Dreidels</Link></Button>
         </Toolbar>
     </AppBar>;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, List, ListItem } from '@mui/material';
+import { Container, List, ListItem, Typography } from '@mui/material';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 export const FAQ = () => {
     return <Container style={{padding: 0}}>
-        <Box>Frequently Asked Questions</Box>
+        <Typography>Frequently Asked Questions</Typography>
         <Accordion>
             <AccordionSummary>Is this game like Dungeons and Dragons?</AccordionSummary>
             <AccordionDetails>
