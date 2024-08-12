@@ -1,12 +1,12 @@
-import { Box, Container } from '@mui/material';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Button, Container, Typography } from '@mui/material';
+import { FAQ } from '../components/FAQ';
 
 export const DybbuksAndDreidels = () => {
     return <Container>
-        Dybbuks and Dreidels
-        <Box>FAQ</Box>
-        <Box>Introduction for people coming from D&D 5e</Box>
-        <Link to="/dybbuks-and-dreidels/dreidel-spinner">Dreidel Spinner</Link>
+        <Typography>Dybbuks and Dreidels</Typography>
+        <Button><Link to="/dybbuks-and-dreidels/dreidel-spinner">Online Dreidel Spinner</Link></Button>
+        <FAQ />
     </Container>;
 }

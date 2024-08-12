@@ -1,15 +1,15 @@
 import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import { Typography } from '@mui/material';
+import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
-    return <AppBar position='sticky'>
+    return <AppBar position='fixed'>
         <Toolbar>
-            <Link to="/"><Typography>Home</Typography></Link>
-            <Link to="/about"><Typography>About</Typography></Link>
-            <Link to="/dybbuks-and-dreidels"><Typography>Dybbuks and Dreidels</Typography></Link>
+            <Button><Link to="/">Home</Link></Button>
+            <Button><Link to="/about">About</Link></Button>
+            <Button><Link to="/dybbuks-and-dreidels">Dybbuks and Dreidels</Link></Button>
         </Toolbar>
     </AppBar>;
 }
