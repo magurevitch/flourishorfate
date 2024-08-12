@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
-import { Box, Button, Container, Grid, Typography } from '@mui/material';
+import { Box, Button, Container, Grid, Tooltip, Typography } from '@mui/material';
+import HelpIcon from '@mui/icons-material/Help';
 import { Dreidel, Side } from '../components/Dreidel';
 
 export const NewChapterDreidels = () => {
@@ -44,6 +45,9 @@ export const NewChapterDreidels = () => {
 
     return <Container>
         <Typography>Chapter Start Spin</Typography>
+        <Tooltip title="Number of dreidels spinning is determined from a Poisson distribution with lambda equal to 3." arrow>
+            <HelpIcon />
+        </Tooltip>
         <Grid container >
             {chapterStartDreidels.map((side, index) => <Grid item>
                 <Dreidel side={side} endTime={5*numberOfDreidels - 2*index - 1} onLand={setStartDreidelIndex(index)}/>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Box, Button, Container, Grid } from '@mui/material';
+import { Box, Button, Container, Grid, Tooltip } from '@mui/material';
+import HelpIcon from '@mui/icons-material/Help';
 import { Dreidel, Side } from '../components/Dreidel';
 
 export const ActionDreidels = () => {
@@ -52,7 +53,7 @@ export const ActionDreidels = () => {
     }
 
     const spinActionDreidel = () => {
-        let time = randomInNormalDistribution(80, 10);
+        let time = randomInNormalDistribution(80, 20);
         setActionTimer(time);
         setActionDreidel(undefined);
         setSupporting(false);
@@ -66,7 +67,11 @@ export const ActionDreidels = () => {
     return <Container>
         <Grid container spacing={2}>
             <Grid item>
-                Action Dreidel <br/>
+                Action Dreidel 
+                <Tooltip title="Time spinning is from a normal distribution with a mean of 8 seconds, standard deviation of 2 seconds." arrow>
+                    <HelpIcon />
+                </Tooltip>
+                <br/>
                 <Dreidel side={actionDreidel} endTime={actionTimer} onLand={setActionDreidel}/>
             </Grid>
             {!isSupporting  || <Grid item>Support Dreidel<br/><Dreidel side={supportDreidel} endTime={actionTimer/4} onLand={setSupportDreidel}/></Grid>}
