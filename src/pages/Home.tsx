@@ -2,10 +2,9 @@ import React from 'react';
 import { Box, Container } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-
 export const Home = () => {
     return <Container>
-        <Box>
+        <Box bgcolor="warning.light" sx={{border: 2, borderColor: 'text.primary', padding: "10px", borderRadius: "8px"}}>
             You are trying to escape the dragon's fire breath.
             You are trying to remember the steps of a particularly difficult dance so the pursuing guards don't know who doesn't belong at this ball.
             You are locked in battle with your rival and former lover.
