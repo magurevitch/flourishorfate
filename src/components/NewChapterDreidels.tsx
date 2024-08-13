@@ -44,10 +44,12 @@ export const NewChapterDreidels = () => {
     }
 
     return <Container>
-        <Typography>Chapter Start Spin</Typography>
-        <Tooltip title="Number of dreidels spinning is determined from a Poisson distribution with lambda equal to 3." arrow>
-            <HelpIcon />
-        </Tooltip>
+        <Typography>
+            Chapter Start Spin
+            <Tooltip title="Number of dreidels spinning is determined from a Poisson distribution with lambda equal to 3." arrow>
+                <HelpIcon />
+            </Tooltip>
+        </Typography>
         <Grid container >
             {chapterStartDreidels.map((side, index) => <Grid item>
                 <Dreidel side={side} endTime={5*numberOfDreidels - 2*index - 1} onLand={setStartDreidelIndex(index)}/>

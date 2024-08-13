@@ -67,7 +67,7 @@ export const ActionDreidels = () => {
     return <Container>
         <Grid container spacing={2}>
             <Grid item>
-                Action Dreidel 
+                Action Dreidel / Evil Eye Dreidel
                 <Tooltip title="Time spinning is from a normal distribution with a mean of 8 seconds, standard deviation of 2 seconds." arrow>
                     <HelpIcon />
                 </Tooltip>
