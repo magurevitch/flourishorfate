@@ -13,7 +13,7 @@ function App() {
     <Container>
       <HashRouter>
         <Navbar />
-        <Container style={{marginTop: "80px", marginBottom: "20px"}}>
+        <Container style={{marginTop: "80px", marginBottom: "30px"}}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/dybbuks-and-dreidels" element={<DybbuksAndDreidels />} />
