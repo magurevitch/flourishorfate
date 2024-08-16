@@ -64,5 +64,19 @@ export const FAQ = () => {
                 Alternatively, you can use a four-sided die, and some way to time approximately 8 seconds (the average amount of time a dreidel stays up).
             </AccordionDetails>
         </Accordion>
+        <Accordion>
+            <AccordionSummary>Is this game simple for people who have never played a TTRPG before?</AccordionSummary>
+            <AccordionDetails>
+                Welcome to the wonderful world of TTRPGS! This game is made to be fairly straightforward for new players.
+                I am currently working on a video for first time players.
+                I made sure to make it simple enough for people to get, but complicated enough to have mechanics that move the story forward.
+            </AccordionDetails>
+        </Accordion>
+        <Accordion>
+            <AccordionSummary>What is a Dybbuk?</AccordionSummary>
+            <AccordionDetails>
+                In Jewish folklore, a soul that must cling to the souls of the living because it is trapped between this world and the next.
+            </AccordionDetails>
+        </Accordion>
     </Container>
 }
