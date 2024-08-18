@@ -72,7 +72,9 @@ export const ActionDreidels = () => {
                     <HelpIcon />
                 </Tooltip>
                 <br/>
-                <Dreidel side={actionDreidel} endTime={actionTimer} onLand={setActionDreidel}/>
+                <Button onClick={() => actionDreidel !== undefined ? spinActionDreidel() : spinSupportDreidel()}>
+                    <Dreidel side={actionDreidel} endTime={actionTimer} onLand={setActionDreidel}/>
+                </Button>
             </Grid>
             {!isSupporting  || <Grid item>Support Dreidel<br/><Dreidel side={supportDreidel} endTime={actionTimer/4} onLand={setSupportDreidel}/></Grid>}
         </Grid>
