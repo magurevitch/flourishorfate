@@ -39,8 +39,12 @@ export const ThreatStack = () => {
             {ephemeral || stackSize}
             <TextField type='number' onChange={(e) => {
                 let value = parseInt(e.target.value);
+                if (value < 0)
+                    setStackSize(0);
                 if(0 <= value && value <= MAX_STACK)
                     setStackSize(value);
+                if(MAX_STACK < value)
+                    setStackSize(MAX_STACK);
             }}/>
             {stackSize === 0 || <Button onClick={() => setStackSize(stackSize - 1)}>Remove Gelt</Button>}
         </Grid>
