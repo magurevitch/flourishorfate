@@ -39,8 +39,8 @@ export const FAQ = () => {
         <Accordion>
             <AccordionSummary>Is this game compatible with my Shabbat observance?</AccordionSummary>
             <AccordionDetails>
+                This game has no writing, no electronics, and no measuring.
                 There are many different ways to interpret how to observe Shabbat, and I cannot answer for every practice.
-                There is no writing, no electronics, and no measuring.
             </AccordionDetails>
         </Accordion>
         <Accordion>

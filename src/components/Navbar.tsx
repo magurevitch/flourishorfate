@@ -9,8 +9,8 @@ import {default as DybbuksAndDreidelsCover} from '../images/DybbuksAndDreidelsCo
 export const Navbar = () => {
     return <AppBar position='fixed'>
         <Toolbar>
-            <Button startIcon={<img src={FlourishOrFateLogo} alt="flourish or fate logo" height="25" width="25" />}><Link to="/">Home</Link></Button>
-            <Button startIcon={<img src={DybbuksAndDreidelsCover} alt="dybbuks and dreidels cover" height="25" width="25"/>}><Link to="/dybbuks-and-dreidels">Dybbuks and Dreidels</Link></Button>
+            <Link to="/"><Button sx={{color:"white"}} startIcon={<img src={FlourishOrFateLogo} alt="flourish or fate logo" height="40" />}>Home</Button></Link>
+            <Link to="/dybbuks-and-dreidels"><Button sx={{color:"white"}} startIcon={<img src={DybbuksAndDreidelsCover} alt="dybbuks and dreidels cover" height="40"/>}>Dybbuks and Dreidels</Button></Link>
         </Toolbar>
     </AppBar>;
 }
