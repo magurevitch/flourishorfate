@@ -37,7 +37,7 @@ export const ThreatStack = () => {
         </Grid>
         <Grid item>
             {ephemeral || stackSize}
-            <TextField type='number' onChange={(e) => {
+            <TextField type='number' label="New size of threat stack" onChange={(e) => {
                 let value = parseInt(e.target.value);
                 if (value < 0)
                     setStackSize(0);
