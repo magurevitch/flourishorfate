@@ -4,7 +4,7 @@ import { Email } from '@mui/icons-material';
 import CopyrightIcon from '@mui/icons-material/Copyright';
 
 export const Footer = () => {
-    return <Box component="footer" position="fixed" bottom="0px" alignSelf="flex-end" padding="0px" sx={{
+    return <Box component="footer" position="fixed" bottom="0px" left="0px" alignSelf="flex-end" sx={{
         bgcolor: 'primary.main',
         width: '100%'
     }}>

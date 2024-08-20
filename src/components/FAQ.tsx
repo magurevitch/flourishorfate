@@ -25,7 +25,7 @@ export const FAQ = () => {
             <AccordionDetails>
                 No.
                 Dybbuks and Dreidels is made to be flexible enough to handle many different stories.
-                Included in the rulebook are 11 stories from around Jewish folklore and history that you can play.
+                Included in the rulebook are 12 stories from around Jewish folklore and history that you can play.
             </AccordionDetails>
         </Accordion>
         <Accordion>
