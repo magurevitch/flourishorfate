@@ -24,6 +24,7 @@ export const ThreatStack = () => {
     }
 
     return <Grid container spacing={2}>
+        <Grid sm={12}>Threat Stack</Grid>
         <Grid item>
             <Stack
                 direction='column-reverse'
@@ -36,17 +37,19 @@ export const ThreatStack = () => {
             </Stack>
         </Grid>
         <Grid item>
-            {ephemeral || stackSize}
-            <TextField type='number' label="New size of threat stack" onChange={(e) => {
-                let value = parseInt(e.target.value);
-                if (value < 0)
-                    setStackSize(0);
-                if(0 <= value && value <= MAX_STACK)
-                    setStackSize(value);
-                if(MAX_STACK < value)
-                    setStackSize(MAX_STACK);
-            }}/>
-            {stackSize === 0 || <Button onClick={() => setStackSize(stackSize - 1)}>Remove Gelt</Button>}
+            <Stack>
+                <div style={{alignSelf: "center"}}>{ephemeral || stackSize}</div>
+                <Button disabled={stackSize === 0} onClick={() => setStackSize(stackSize - 1)}>Remove Gelt</Button>
+                <TextField type='number' label="new size" sx={{width: 120}} onChange={(e) => {
+                    let value = parseInt(e.target.value);
+                    if (value < 0)
+                        setStackSize(0);
+                    if(0 <= value && value <= MAX_STACK)
+                        setStackSize(value);
+                    if(MAX_STACK < value)
+                        setStackSize(MAX_STACK);
+                }}/>
+            </Stack>
         </Grid>
     </Grid>;
 }

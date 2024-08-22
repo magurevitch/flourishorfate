@@ -13,11 +13,11 @@ export const DreidelSpinner = () => {
         <Grid item>
             Dybbuks and Dreidels has 4 different types of dreidel spin. The Action Spin and the Evil Eye spin can use the action dreidel, and the Support Spin and the Chapter Start Spin have their own buttons. 
         </Grid>
-        <Grid item>
-            <ActionDreidels />
+        <Grid item  sm={12}>
+            <NewChapterDreidels />
         </Grid>
         <Grid item>
-            <NewChapterDreidels />
+            <ActionDreidels />
         </Grid>
         <Grid item>
             <ThreatStack />
