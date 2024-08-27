@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Container, Grid, Typography } from '@mui/material';
+import { Button, Grid, Typography } from '@mui/material';
 import { FAQ } from '../components/FAQ';
 import {default as DybbuksAndDreidelsCover} from '../images/DybbuksAndDreidelsCoverText.jpg';
 

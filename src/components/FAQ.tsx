@@ -4,13 +4,13 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import { Link } from 'react-router-dom';
-
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
 export const FAQ = () => {
     return <Container style={{padding: 0}}>
         <Typography>Frequently Asked Questions</Typography>
         <Accordion>
-            <AccordionSummary>Is this game like Dungeons and Dragons?</AccordionSummary>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>Is this game like Dungeons and Dragons?</AccordionSummary>
             <AccordionDetails>
                 Depends on what you you mean by "like Dungeons and Dragons."
                 This game, just like Dungeons and Dragons, is a Table-Top Role Playing Game, where one player is the Game Master and the rest play characters.
@@ -21,7 +21,7 @@ export const FAQ = () => {
             </AccordionDetails>
         </Accordion>
         <Accordion>
-            <AccordionSummary>Is there a particular story or setting to this game?</AccordionSummary>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>Is there a particular story or setting to this game?</AccordionSummary>
             <AccordionDetails>
                 No.
                 Dybbuks and Dreidels is made to be flexible enough to handle many different stories.
@@ -29,7 +29,7 @@ export const FAQ = () => {
             </AccordionDetails>
         </Accordion>
         <Accordion>
-            <AccordionSummary>Can I play if I'm not Jewish?</AccordionSummary>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>Can I play if I'm not Jewish?</AccordionSummary>
             <AccordionDetails>
                 Yes.
                 While Dybbuks and Dreidels draws from the Jewish tradition, it is open to everyone to play.
@@ -37,14 +37,14 @@ export const FAQ = () => {
             </AccordionDetails>
         </Accordion>
         <Accordion>
-            <AccordionSummary>Is this game compatible with my Shabbat observance?</AccordionSummary>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>Is this game compatible with my Shabbat observance?</AccordionSummary>
             <AccordionDetails>
                 This game has no writing, no electronics, and no measuring.
                 There are many different ways to interpret how to observe Shabbat, and I cannot answer for every practice.
             </AccordionDetails>
         </Accordion>
         <Accordion>
-            <AccordionSummary>What do I need to play?</AccordionSummary>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>What do I need to play?</AccordionSummary>
             <AccordionDetails>
                 <List>
                     <ListItem>A Copy of the Rulebook</ListItem>
@@ -57,7 +57,7 @@ export const FAQ = () => {
             </AccordionDetails>
         </Accordion>
         <Accordion>
-            <AccordionSummary>What do I do if I don't have Dreidels, or spinning a dreidel is difficult for me?</AccordionSummary>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>What do I do if I don't have Dreidels, or spinning a dreidel is difficult for me?</AccordionSummary>
             <AccordionDetails>
                 You can still play!
                 You can use an <Link to="/dybbuks-and-dreidels/dreidel-spinner">Online Dreidel Spinner</Link>.
@@ -65,7 +65,7 @@ export const FAQ = () => {
             </AccordionDetails>
         </Accordion>
         <Accordion>
-            <AccordionSummary>Is this game simple for people who have never played a TTRPG before?</AccordionSummary>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>Is this game simple for people who have never played a TTRPG before?</AccordionSummary>
             <AccordionDetails>
                 Welcome to the wonderful world of TTRPGS! This game is made to be fairly straightforward for new players.
                 I am currently working on a video for first time players.
@@ -73,7 +73,7 @@ export const FAQ = () => {
             </AccordionDetails>
         </Accordion>
         <Accordion>
-            <AccordionSummary>What is a Dybbuk?</AccordionSummary>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>What is a Dybbuk?</AccordionSummary>
             <AccordionDetails>
                 In Jewish folklore, a soul that must cling to the souls of the living because it is trapped between this world and the next.
             </AccordionDetails>
