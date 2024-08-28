@@ -8,7 +8,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
 export const FAQ = () => {
     return <Container style={{padding: 0}}>
-        <Typography>Frequently Asked Questions</Typography>
+        <Typography variant='h4'>Frequently Asked Questions</Typography>
         <Accordion>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>Is this game like Dungeons and Dragons?</AccordionSummary>
             <AccordionDetails>

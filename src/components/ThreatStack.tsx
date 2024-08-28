@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Grid, Stack, TextField } from '@mui/material';
+import { Button, Grid, Stack, TextField, Typography } from '@mui/material';
 import CircleIcon from '@mui/icons-material/Circle';
 import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
 
@@ -23,8 +23,8 @@ export const ThreatStack = () => {
         return MAX_STACK - Math.floor(fromTop);
     }
 
-    return <Grid container spacing={2}>
-        <Grid sm={12}>Threat Stack</Grid>
+    return <Grid container>
+        <Grid sm={12}><Typography variant='h6'>Threat Stack</Typography></Grid>
         <Grid item>
             <Stack
                 direction='column-reverse'
@@ -37,10 +37,10 @@ export const ThreatStack = () => {
             </Stack>
         </Grid>
         <Grid item>
-            <Stack>
+            <Stack margin={2}>
                 <div style={{alignSelf: "center"}}>{ephemeral || stackSize}</div>
-                <Button disabled={stackSize === 0} onClick={() => setStackSize(stackSize - 1)}>Remove Gelt</Button>
-                <TextField type='number' label="new size" sx={{width: 120}} onChange={(e) => {
+                <Button disabled={stackSize === 0} onClick={() => setStackSize(stackSize - 1)}>Remove<br />Gelt</Button>
+                <TextField type='number' label="size" sx={{width: 80}} onChange={(e) => {
                     let value = parseInt(e.target.value);
                     if (value < 0)
                         setStackSize(0);

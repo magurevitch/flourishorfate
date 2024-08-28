@@ -44,7 +44,7 @@ export const NewChapterDreidels = () => {
     }
 
     return <Container>
-        <Typography>
+        <Typography variant='h6'>
             Chapter Start Spin
             <Tooltip title="Number of dreidels spinning is determined from a Poisson distribution with lambda equal to 3." arrow>
                 <HelpIcon />
