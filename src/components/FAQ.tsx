@@ -14,7 +14,7 @@ export const FAQ = () => {
             <AccordionDetails>
                 Depends on what you you mean by "like Dungeons and Dragons."
                 This game, just like Dungeons and Dragons, is a Table-Top Role Playing Game, where one player is the Game Master and the rest play characters.
-                However, the two take very different approaches to how to tell stories within in.
+                However, the two take very different approaches to how to tell stories.
                 Dungeons and Dragons has complicated structures to allow for campaigns that go on for years.
                 Dybbuks and Dreidels has a streamlined ruleset, which is good for single session games.
                 There is an entire page in the rulebook about various differences between the two games.
