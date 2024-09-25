@@ -11,7 +11,7 @@ export const DybbuksAndDreidels = () => {
             <Typography variant='h4'>Dybbuks and Dreidels</Typography>
             Dybbuks and Dreidels is a Table-Top Role Playing Game inspired by Jewish history and culture.
             The rulebook is available on <a href="https://www.drivethrurpg.com/en/product/493884/dybbuks-and-dreidels">DriveThruRPG</a>.
-            It is currently only available in PDF, but I am working on getting the book out soon as well.
+            It is available in PDF and in print format.
             The game is intended for one-shot storytelling, for 4-7 people.
 
             <br/>
