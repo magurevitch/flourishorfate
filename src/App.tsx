@@ -7,6 +7,7 @@ import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { DybbuksAndDreidels } from './pages/DybbuksAndDreidels';
 import { DreidelSpinner } from './pages/DreidelSpinner';
+import { ForRetailers } from './pages/ForRetailers';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/dybbuks-and-dreidels" element={<DybbuksAndDreidels />} />
             <Route path="/dybbuks-and-dreidels/dreidel-spinner" element={<DreidelSpinner />} />
+            <Route path="/for-retailers" element={<ForRetailers />} />
           </Routes>
         </Container>
         <Footer />
