@@ -47,12 +47,13 @@ export const FAQ = () => {
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>What do I need to play?</AccordionSummary>
             <AccordionDetails>
                 <List>
-                    <ListItem>A Copy of the Rulebook</ListItem>
+                    <ListItem>A Copy of the Rulebook <a href="https://www.drivethrurpg.com/en/product/493884/dybbuks-and-dreidels">which you can buy here</a></ListItem>
                     <ListItem>At least 6 dreidels total, or an <Link to="/dybbuks-and-dreidels/dreidel-spinner">Online Dreidel Spinner</Link></ListItem>
                     <ListItem>At least 8 Gelt per player, or an alternative counter, such as poker chips or candy</ListItem>
-                    <ListItem>At least 3 tokens per player to represent Harm.</ListItem>
-                    <ListItem> At least 2 tokens in total to represent distress</ListItem>
+                    <ListItem>At least 3 tokens per player to represent Harm. These can be a different color counter</ListItem>
+                    <ListItem>(Optional) At least 2 tokens in total to represent Distress</ListItem>
                     <ListItem>(Optional) 3 index cards per player OR 1 piece of paper per player with 3 sections</ListItem>
+                    <ListItem>4-7 people who want to use their imaginations for 1-3 hours</ListItem>
                 </List>
             </AccordionDetails>
         </Accordion>
@@ -65,17 +66,17 @@ export const FAQ = () => {
             </AccordionDetails>
         </Accordion>
         <Accordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>Is this game simple for people who have never played a TTRPG before?</AccordionSummary>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>How is this game for people who have never played a TTRPG before?</AccordionSummary>
             <AccordionDetails>
-                Welcome to the wonderful world of TTRPGS! This game is made to be fairly straightforward for new players.
-                I am currently working on a video for first time players.
-                I made sure to make it simple enough for people to get, but complicated enough to have mechanics that move the story forward.
+                Welcome to the wonderful world of TTRPGs!
+                Dybbuks and Dreidels is very beginner friendly!
+                The rules are there to help the story roll along smoothly, so don't worry about doing everything "right."
             </AccordionDetails>
         </Accordion>
         <Accordion>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>What is a Dybbuk?</AccordionSummary>
             <AccordionDetails>
-                In Jewish folklore, a soul that must cling to the souls of the living because it is trapped between this world and the next.
+                In Jewish folklore, a dybbuk is a soul that must cling to the souls of the living because it is trapped between this world and the next.
             </AccordionDetails>
         </Accordion>
     </Container>
