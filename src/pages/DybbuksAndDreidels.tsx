@@ -14,6 +14,8 @@ export const DybbuksAndDreidels = () => {
             It is available in PDF and in print format.
             The game is intended for one-shot storytelling, for 4-7 people.
 
+            It is a fully stand-alone system, made to be simple enough for first time players but with enough tools that experienced TTRPG players will find plenty new to play with.
+
             <br/>
             <Link to="/dybbuks-and-dreidels/dreidel-spinner"><Button sx={{
                 color: 'white',
