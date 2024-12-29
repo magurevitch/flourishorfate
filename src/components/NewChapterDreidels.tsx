@@ -44,19 +44,21 @@ export const NewChapterDreidels = () => {
     }
 
     return <Container>
-        <Typography>
+        <Typography variant='h6'>
             Chapter Start Spin
             <Tooltip title="Number of dreidels spinning is determined from a Poisson distribution with lambda equal to 3." arrow>
                 <HelpIcon />
             </Tooltip>
         </Typography>
-        <Grid container >
-            {chapterStartDreidels.map((side, index) => <Grid item>
-                <Dreidel side={side} endTime={5*numberOfDreidels - 2*index - 1} onLand={setStartDreidelIndex(index)}/>
-                <br/>
-                {side === undefined || `${values[side]}`}
-            </Grid>)}
-        </Grid>
+        <Button onClick={() => chapterStartDreidels.every(side => side !== undefined) ? spinStartDreidels() : undefined}>
+            <Grid container>
+                {chapterStartDreidels.map((side, index) => <Grid item>
+                    <Dreidel side={side} endTime={5*numberOfDreidels - 2*index - 1} onLand={setStartDreidelIndex(index)}/>
+                    <br/>
+                    {side === undefined || `${values[side]}`}
+                </Grid>)}
+            </Grid>
+        </Button>
         {chapterStartDreidels.some(side => side === undefined) || <Box>Total: {chapterStartDreidels.map(side => side !== undefined ? values[side] : 0).reduce((a, b) => a + b, 0)}</Box>}
         {chapterStartDreidels.some(side => side === undefined) || <Button onClick={spinStartDreidels}>Spin New Chapter Dreidels</Button>}
     </Container>;

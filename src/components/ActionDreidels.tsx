@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Button, Container, Grid, Tooltip } from '@mui/material';
+import { Box, Button, Container, Grid, Tooltip, Typography } from '@mui/material';
 import HelpIcon from '@mui/icons-material/Help';
 import { Dreidel, Side } from '../components/Dreidel';
 
@@ -67,14 +67,24 @@ export const ActionDreidels = () => {
     return <Container>
         <Grid container spacing={2}>
             <Grid item>
-                Action Dreidel / Evil Eye Dreidel
-                <Tooltip title="Time spinning is from a normal distribution with a mean of 8 seconds, standard deviation of 2 seconds." arrow>
-                    <HelpIcon />
-                </Tooltip>
-                <br/>
-                <Dreidel side={actionDreidel} endTime={actionTimer} onLand={setActionDreidel}/>
+                <Typography variant='h6'>
+                    Action Dreidel
+                    <Tooltip title="Time spinning is from a normal distribution with a mean of 8 seconds, standard deviation of 2 seconds." arrow>
+                        <HelpIcon />
+                    </Tooltip>
+                </Typography>
+                <Button onClick={() => actionDreidel !== undefined ? spinActionDreidel() : spinSupportDreidel()}>
+                    <Dreidel side={actionDreidel} endTime={actionTimer} onLand={setActionDreidel}/>
+                </Button>
             </Grid>
-            {!isSupporting  || <Grid item>Support Dreidel<br/><Dreidel side={supportDreidel} endTime={actionTimer/4} onLand={setSupportDreidel}/></Grid>}
+            {!isSupporting  ||
+                <Grid item>
+                    <Typography variant='h6'>Support Dreidel</Typography>
+                    <div style={{padding: 6}}>
+                        <Dreidel side={supportDreidel} endTime={actionTimer/4} onLand={setSupportDreidel}/>
+                    </div>
+                </Grid>
+            }
         </Grid>
         {actionDreidel === undefined || <Box>{isHit[actionDreidel] ? "Hit" : "Miss"}</Box>}
         {renderReprecussions()}
