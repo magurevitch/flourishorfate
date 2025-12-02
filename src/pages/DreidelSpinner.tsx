@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button, Grid, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { ActionDreidels } from '../components/ActionDreidels';
-import { NewChapterDreidels } from '../components/NewChapterDreidels';
-import { ThreatStack } from '../components/ThreatStack';
+import { ActionDreidels } from '../components/DybbuksAndDreidels/ActionDreidels'
+import { NewChapterDreidels } from '../components/DybbuksAndDreidels/NewChapterDreidels';
+import { ThreatStack } from '../components/DybbuksAndDreidels/ThreatStack';
 
 export const DreidelSpinner = () => {
     return <Grid container>

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Box, Button, Container, Grid, Tooltip, Typography } from '@mui/material';
 import HelpIcon from '@mui/icons-material/Help';
-import { Dreidel, Side } from '../components/Dreidel';
+import { Dreidel, Side } from './Dreidel';
 
 export const NewChapterDreidels = () => {
     const [chapterStartDreidels, setChapterStartDreidels] = useState<(Side | undefined)[]>([]);
