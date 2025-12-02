@@ -3,7 +3,7 @@ import { Button, Grid, Stack, TextField, Typography } from '@mui/material';
 import CircleIcon from '@mui/icons-material/Circle';
 import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
 
-export const ThreatStack = () => {
+export const ThreatStack: React.FC  = () => {
     const MAX_STACK = 12;
 
     const [stackSize, setStackSize] = useState<number>(0);

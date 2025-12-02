@@ -3,7 +3,7 @@ import { Box, Button, Container } from '@mui/material';
 import { Email } from '@mui/icons-material';
 import CopyrightIcon from '@mui/icons-material/Copyright';
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
     return <Box component="footer" position="fixed" bottom="0px" left="0px" alignSelf="flex-end" sx={{
         bgcolor: 'primary.main',
         width: '100%'

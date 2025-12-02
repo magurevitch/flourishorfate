@@ -4,7 +4,7 @@ import { Grid } from '@mui/material';
 import {default as FlourishOrFateLogo} from '../images/FlourishOrFateIcon.png';
 
 
-export const Home = () => {
+export const Home: React.FC = () => {
     return <Grid container>
         <Grid item bgcolor="warning.light" sx={{border: 2, borderColor: 'text.primary', padding: "10px", borderRadius: "8px"}}>
             You are trying to escape the dragon's fire breath.

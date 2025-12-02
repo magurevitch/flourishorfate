@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ForRetailers = () => {
+export const ForRetailers: React.FC = () => {
     return <div>
         <p>
             Hi retailers! Thank you for your interest in Flourish or Fate Games!

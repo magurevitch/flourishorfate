@@ -3,7 +3,7 @@ import { Box, Button, Container, Grid, Tooltip, Typography } from '@mui/material
 import HelpIcon from '@mui/icons-material/Help';
 import { Dreidel, Side } from './Dreidel';
 
-export const ActionDreidels = () => {
+export const ActionDreidels: React.FC = () => {
     const [actionTimer, setActionTimer] = useState<number>(80);
     const [actionDreidel, setActionDreidel] = useState<Side | undefined>(Side.GIMEL);
     const [isSupporting, setSupporting] = useState<boolean>(false);
