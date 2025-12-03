@@ -1,4 +1,5 @@
 import React from 'react';
+import { EmailLink } from '../components/EmailLink';
 
 export const ForRetailers: React.FC = () => {
     return <div>
@@ -7,7 +8,7 @@ export const ForRetailers: React.FC = () => {
         </p>
         <p>
             My games are published through <a href="https://www.drivethrurpg.com/en/publisher/28340/flourish-or-fate-games">DriveThruRPG</a>.
-            To request a code for the retailer discount, please e-mail me at <a href='mailto:flourishorfate@gmail.com'>FlourishOrFate@gmail.com</a>.
+            To request a code for the retailer discount, please e-mail me at <EmailLink />.
         </p>
     </div>;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Grid } from '@mui/material';
 import {default as FlourishOrFateLogo} from '../images/FlourishOrFateIcon.png';
+import { EmailLink } from '../components/EmailLink';
 
 
 export const Home: React.FC = () => {
@@ -17,8 +18,8 @@ export const Home: React.FC = () => {
         <Grid item>
             Welcome to Flourish or Fate Games, a one-person game studio.
             Currently, the only offering is a Table-Top Role Playing Game called <Link to="/dybbuks-and-dreidels">Dybbuks and Dreidels</Link>, inspired by various elements from Jewish folklore.
-            There are more in the works.
-            For more inquiries, feel free to reach out to me at <a href='mailto:flourishorfate@gmail.com'>FlourishOrFate@gmail.com</a>.
+            There are <Link to="/upcoming">more in the works</Link>.
+            For more inquiries, feel free to reach out to me at <EmailLink />.
         </Grid>
         <Grid item>
             <img src={FlourishOrFateLogo} alt="Flourish or Fate Logo" width="50%"/>
