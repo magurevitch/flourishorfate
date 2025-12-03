@@ -6,12 +6,13 @@ import { Link } from 'react-router-dom';
 import {default as FlourishOrFateLogo} from '../images/FlourishOrFateIcon.png';
 import {default as DybbuksAndDreidelsCover} from '../images/DybbuksAndDreidelsCover.png';
 
-export const Navbar = () => {
+export const Navbar: React.FC = () => {
     return <AppBar position='fixed'>
         <Toolbar>
             <Link to="/"><Button sx={{color:"white"}} startIcon={<img src={FlourishOrFateLogo} alt="flourish or fate logo" height="40" />}>Home</Button></Link>
             <Link to="/dybbuks-and-dreidels"><Button sx={{color:"white"}} startIcon={<img src={DybbuksAndDreidelsCover} alt="dybbuks and dreidels cover" height="40"/>}>Dybbuks and Dreidels</Button></Link>
             <Link to="/for-retailers"><Button sx={{color:"white"}}>For Retailers</Button></Link>
+            <Link to="/upcoming"><Button sx={{color:"white"}}>Upcoming Games</Button></Link>
         </Toolbar>
     </AppBar>;
 }

@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Grid } from '@mui/material';
 import {default as FlourishOrFateLogo} from '../images/FlourishOrFateIcon.png';
+import { EmailLink } from '../components/EmailLink';
 
 
-export const Home = () => {
+export const Home: React.FC = () => {
     return <Grid container>
         <Grid item bgcolor="warning.light" sx={{border: 2, borderColor: 'text.primary', padding: "10px", borderRadius: "8px"}}>
             You are trying to escape the dragon's fire breath.
@@ -17,7 +18,8 @@ export const Home = () => {
         <Grid item>
             Welcome to Flourish or Fate Games, a one-person game studio.
             Currently, the only offering is a Table-Top Role Playing Game called <Link to="/dybbuks-and-dreidels">Dybbuks and Dreidels</Link>, inspired by various elements from Jewish folklore.
-            There are more in the works.
+            There are <Link to="/upcoming">more in the works</Link>.
+            For more inquiries, feel free to reach out to me at <EmailLink />.
         </Grid>
         <Grid item>
             <img src={FlourishOrFateLogo} alt="Flourish or Fate Logo" width="50%"/>

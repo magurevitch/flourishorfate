@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Grid, Typography } from '@mui/material';
-import { FAQ } from '../components/FAQ';
+import { FAQ } from '../components/DybbuksAndDreidels/FAQ';
 import {default as DybbuksAndDreidelsCover} from '../images/DybbuksAndDreidelsCoverFront.jpg';
 
 
-export const DybbuksAndDreidels = () => {
+export const DybbuksAndDreidels: React.FC = () => {
     return <Grid container>
         <Grid item sm={9}>
             <Typography variant='h4'>Dybbuks and Dreidels</Typography>

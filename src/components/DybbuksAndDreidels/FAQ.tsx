@@ -6,7 +6,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import { Link } from 'react-router-dom';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
-export const FAQ = () => {
+export const FAQ: React.FC = () => {
     return <Container style={{padding: 0}}>
         <Typography variant='h4'>Frequently Asked Questions</Typography>
         <Accordion>

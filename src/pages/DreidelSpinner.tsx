@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button, Grid, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { ActionDreidels } from '../components/ActionDreidels';
-import { NewChapterDreidels } from '../components/NewChapterDreidels';
-import { ThreatStack } from '../components/ThreatStack';
+import { ActionDreidels } from '../components/DybbuksAndDreidels/ActionDreidels';
+import { NewChapterDreidels } from '../components/DybbuksAndDreidels/NewChapterDreidels';
+import { ThreatStack } from '../components/DybbuksAndDreidels/ThreatStack';
 
-export const DreidelSpinner = () => {
+export const DreidelSpinner: React.FC = () => {
     return <Grid container>
         <Grid item sm={12}>
             <Typography variant='h4'>Online Dreidel Spinner</Typography>
