@@ -9,6 +9,7 @@ import { DybbuksAndDreidels } from './pages/DybbuksAndDreidels';
 import { DreidelSpinner } from './pages/DreidelSpinner';
 import { ForRetailers } from './pages/ForRetailers';
 import { UpcomingGames } from './pages/UpcomingGames';
+import { PlansInATangle } from './pages/PlansInATangle';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/dybbuks-and-dreidels" element={<DybbuksAndDreidels />} />
             <Route path="/dybbuks-and-dreidels/dreidel-spinner" element={<DreidelSpinner />} />
+            <Route path="/plans-in-a-tangle" element={<PlansInATangle />}/>
             <Route path="/for-retailers" element={<ForRetailers />} />
             <Route path="/upcoming" element={<UpcomingGames/>} />
           </Routes>
