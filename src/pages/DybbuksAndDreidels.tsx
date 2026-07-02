@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Grid, Typography } from '@mui/material';
 import { FAQ } from '../components/DybbuksAndDreidels/FAQ';
-import {default as DybbuksAndDreidelsCover} from '../images/DybbuksAndDreidelsCoverFront.jpg';
+import {default as DybbuksAndDreidelsCover} from '../images/DybbuksAndDreidels/CoverFront.jpg';
 
 
 export const DybbuksAndDreidels: React.FC = () => {

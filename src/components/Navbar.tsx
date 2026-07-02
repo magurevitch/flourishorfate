@@ -4,7 +4,7 @@ import Toolbar from '@mui/material/Toolbar';
 import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import {default as FlourishOrFateLogo} from '../images/FlourishOrFateIcon.png';
-import {default as DybbuksAndDreidelsCover} from '../images/DybbuksAndDreidelsCover.png';
+import {default as DybbuksAndDreidelsCover} from '../images/DybbuksAndDreidels/Cover.png';
 
 export const Navbar: React.FC = () => {
     return <AppBar position='fixed'>
