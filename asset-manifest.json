@@ -1,18 +1,21 @@
 {
   "files": {
     "main.css": "/static/css/main.f855e6bc.css",
-    "main.js": "/static/js/main.285bdc7d.js",
+    "main.js": "/static/js/main.9f6d7136.js",
     "static/js/453.c72461ed.chunk.js": "/static/js/453.c72461ed.chunk.js",
-    "static/media/DybbuksAndDreidelsCover.png": "/static/media/DybbuksAndDreidelsCover.1728dbac91099bc40d9e.png",
-    "static/media/DybbuksAndDreidelsCoverFront.jpg": "/static/media/DybbuksAndDreidelsCoverFront.5b92e69b2814054ed460.jpg",
+    "static/media/Cover.png": "/static/media/Cover.1728dbac91099bc40d9e.png",
+    "static/media/CoverFront.jpg": "/static/media/CoverFront.5b92e69b2814054ed460.jpg",
+    "static/media/Tangle.png": "/static/media/Tangle.3c0efb8df94e578c1a49.png",
     "static/media/FlourishOrFateIcon.png": "/static/media/FlourishOrFateIcon.c0361a09d268023fcce2.png",
+    "static/media/LadyInBlack.png": "/static/media/LadyInBlack.c05efe64fddba84cdd28.png",
+    "static/media/LadyInYellow.png": "/static/media/LadyInYellow.d11e4752e6323ace194e.png",
     "index.html": "/index.html",
     "main.f855e6bc.css.map": "/static/css/main.f855e6bc.css.map",
-    "main.285bdc7d.js.map": "/static/js/main.285bdc7d.js.map",
+    "main.9f6d7136.js.map": "/static/js/main.9f6d7136.js.map",
     "453.c72461ed.chunk.js.map": "/static/js/453.c72461ed.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.285bdc7d.js"
+    "static/js/main.9f6d7136.js"
   ]
 }
