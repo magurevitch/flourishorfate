@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
         <Container sx={{color: 'white',display: 'flex',alignItems: 'center',flexWrap: 'wrap'}}>
             <div>Flourish or Fate Games</div>
             <Button sx={{color: 'white'}} onClick={() => {window.location.href = 'mailto:flourishorfate@gmail.com';}} startIcon={<Email />}>Email</Button>
-            <div style={{display: 'flex',alignItems: 'center',flexWrap: 'wrap',}}><CopyrightIcon /> 2024 Matthew Gurevitch</div>
+            <div style={{display: 'flex',alignItems: 'center',flexWrap: 'wrap',}}><CopyrightIcon /> 2024-2026 Matthew Gurevitch</div>
         </Container>
     </Box>
 }

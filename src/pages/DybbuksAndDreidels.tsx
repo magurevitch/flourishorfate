@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Grid, Typography } from '@mui/material';
 import { FAQ } from '../components/DybbuksAndDreidels/FAQ';
-import {default as DybbuksAndDreidelsCover} from '../images/DybbuksAndDreidelsCoverFront.jpg';
+import {default as DybbuksAndDreidelsCover} from '../images/DybbuksAndDreidels/CoverFront.jpg';
 
 
 export const DybbuksAndDreidels: React.FC = () => {
@@ -24,6 +24,15 @@ export const DybbuksAndDreidels: React.FC = () => {
         </Grid>
         <Grid item sm={3}>
             <a href='https://www.drivethrurpg.com/en/product/493884/dybbuks-and-dreidels'><img src={DybbuksAndDreidelsCover} alt="Dybbuks and Dreidels Cover" width="100%"/></a>
+        </Grid>
+        <Grid item sm={12}>
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/fYzUXEiKIF0?si=5nkr9Img2bScTXAQ"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            />
         </Grid>
         <Grid item sm={12}><FAQ /></Grid>
     </Grid>;
